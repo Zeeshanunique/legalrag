@@ -22,13 +22,13 @@ const HomeContent = () => {
   };
 
   return (
-    <div className="grid h-screen w-full">
+    <div className="grid min-h-screen w-full">
       <div className="flex flex-col">
         <header className="sticky top-0 z-10 flex h-[57px] bg-background items-center gap-1 border-b px-4">
-          <h1 className="text-xl font-semibold text-[#D90013]">
+          <h1 className="text-lg md:text-xl font-semibold text-[#D90013]">
             <span className="flex flex-row">Kanoon!</span>
           </h1>
-          <div className="w-full flex flex-row justify-end gap-2">
+          <div className="w-full flex flex-row justify-end gap-2 items-center">
             <ModeToggle />
             <Drawer>
               <DrawerTrigger asChild>
@@ -42,8 +42,8 @@ const HomeContent = () => {
               </DrawerContent>
             </Drawer>
 
-            {/* Use Clerk's UserButton for handling user options, including sign out */}
-            <div className="flex space-x-4">
+            {/* Clerk's UserButton for handling user options, including sign out */}
+            <div className="flex space-x-4 items-center">
               <UserButton afterSignOutUrl="/" />
             </div>
           </div>
@@ -51,9 +51,9 @@ const HomeContent = () => {
 
         <main
           className="grid flex-1 gap-4 overflow-auto p-4
-          md:grid-cols-2
-          lg:grid-cols-3"
+          grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         >
+          {/* Display ReportComponent only on medium screens and larger */}
           <div className="hidden md:flex flex-col">
             <ReportComponent onReportConfirmation={onReportConfirmation} />
           </div>
