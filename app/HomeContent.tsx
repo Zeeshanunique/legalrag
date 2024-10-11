@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { Settings } from "lucide-react";
+import { Upload } from 'lucide-react';
 import { ModeToggle } from "@/components/modetoggle";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
@@ -33,8 +34,10 @@ const HomeContent = () => {
             <Drawer>
               <DrawerTrigger asChild>
                 <Button variant="ghost" size="icon" className="md:hidden">
-                  <Settings />
-                  <span className="sr-only">Settings</span>
+                  {/* <Settings /> */}
+                  <Upload />
+                  {/* <span className="sr-only">Settings</span> */}
+                  <span className="sr-only">Upload</span>
                 </Button>
               </DrawerTrigger>
               <DrawerContent className="max-h-[80vh]">
