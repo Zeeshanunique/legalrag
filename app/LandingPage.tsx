@@ -5,10 +5,10 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6">
       <header className="w-full max-w-4xl mx-auto flex justify-between items-center py-4">
-        <h1 className="text-2xl md:text-3xl font-bold text-[#D90013]">Kanoon</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-red-600">Kanoon</h1>
         <div>
           <SignInButton>
-            <Button className="bg-secondary text-white py-2 px-4 rounded-lg hover:bg-primary-foreground">
+            <Button className="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-500">
               Sign In
             </Button>
           </SignInButton>
@@ -22,11 +22,11 @@ const LandingPage = () => {
         </p>
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
           <SignInButton>
-            <Button className="bg-secondary text-white py-3 px-6 rounded-lg hover:bg-primary-foreground">
+            <Button className="bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-500">
               Get Started
             </Button>
           </SignInButton>
-          <Button className="bg-secondary text-white py-3 px-6 rounded-lg hover:bg-primary-foreground">
+          <Button className="bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-500">
             Learn More
           </Button>
         </div>
