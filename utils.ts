@@ -32,7 +32,7 @@ export async function queryPineconeVectorStore(
 
   if (queryResponse.matches.length > 0) {
     const concatenatedRetrievals = queryResponse.matches
-      .map((match,index) =>`\nClinical Finding ${index+1}: \n ${match.metadata?.chunk}`)
+      .map((match,index) =>`\nLegal Finding ${index+1}: \n ${match.metadata?.chunk}`)
       .join(". \n\n");
     return concatenatedRetrievals;
   } else {
