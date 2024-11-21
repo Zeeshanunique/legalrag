@@ -1,13 +1,12 @@
 "use client";
 
-import { ClerkProvider, SignedIn, SignedOut } from "@clerk/nextjs";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import LandingPage from "./LandingPage";
 import HomeContent from "./HomeContent";
-// Unauthenticated landing page
 
 const Home = () => {
   return (
-    <ClerkProvider>
+    <>
       <SignedOut>
         {/* Redirect users to the landing page if not signed in */}
         <LandingPage />
@@ -16,7 +15,7 @@ const Home = () => {
         {/* Display the main application when the user is signed in */}
         <HomeContent />
       </SignedIn>
-    </ClerkProvider>
+    </>
   );
 };
 
